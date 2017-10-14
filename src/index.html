@@ -2,11 +2,34 @@
 <html> 
 <head>
 <title> todo app</title>
+<link href="style.css" rel="stylesheet">
 </head>
-    <body>
-        <h1> my todo app </h1>
+    <body onload="doCoolStuff()">
+
+        
 <h2> smaller than h1 </h2>
+<h1 id="red-text"> my todo app </h1>
+<h1 id="red-text" class= "green-text red-text"> my todo app </h1>
 <p> nofbicjojgsdjsdgjdgjsdjd <span style ="color:green;">ndffgihhgfjgjgjgrjrjinegn</span> gjfjgjdgjjjgj </p>
+<script type="text/javascript">
+var max = 50
+var amount = 5
+
+    function doCoolStuff(){
+
+        
+        setTimeout(function(){
+            amount = amount + 5
+            console.log(amount)
+            document.querySelector(".red-text.green-text").style.left = amount + "px"
+            
+            if(amount < max){
+                doCoolStuff()
+            }
+        }, 1000)
+    }
+</script>
+
     </body> 
 
 </html>
